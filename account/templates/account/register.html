@@ -44,9 +44,9 @@
 
 <form class="form-signin" method="post">{% csrf_token %}
   <div class="d-flex flex-column pb-3">
-    <img class="img-fluid mx-auto d-block" src="{% static 'codingwithmitch_logo.png' %}" alt="Codignwithmitch logo image" width="72" height="72">
+    <img class="img-fluid mx-auto d-block" src="{% static 'logo_educollab.png' %}" alt="Codignwithmitch logo image" width="200" height="200">
   </div>
-  <h1 class="h3 mb-3 font-weight-normal">Enregistrement</h1>
+  <h1 class="h3 mb-3 font-weight-normal">INSCRIPTION</h1>
 
   <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Adresse email" required autofocus>
 
@@ -56,9 +56,9 @@
 
   <input type="text" name="last_name" id="inputLast_name" class="form-control" placeholder="Nom" required>
   
-  <input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Password" required>
+  <input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Mot de passe" required>
 
-  <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirm password" required>
+  <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirmer le mot de passe" required>
 
   {% for field in registration_form %}
       <p>
