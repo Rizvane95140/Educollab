@@ -1,0 +1,74 @@
+{% extends 'base_log.html' %} {% block content %}
+
+<!doctype html>
+<html lang="en">
+
+<body>
+
+    <main role="main" class="col-md-10 ml-sm-auto col-lg-10 pt-3 px-5">
+
+        <div class="container bootstrap snippet">
+
+            <div class="col-sm-9">
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        <form class="form" action="##" method="post" id="registrationForm">
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="first_name">
+                                        <h4>Matière</h4></label>
+                                    <input type="text" class="form-control" name="first_name" id="first_name" title="enter your first name if any.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="last_name">
+                                        <h4>Chapitre</h4></label>
+                                    <input type="text" class="form-control" name="last_name" id="last_name" title="enter your last name if any.">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="phone">
+                                        <h4>Lien</h4></label>
+                                    <input type="text" class="form-control" name="phone" id="phone" title="enter your phone number if any.">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <br>
+                                    <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Ajouter</button>
+
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!--/tab-pane-->
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+        </div>
+        </div>
+    </main>
+    </div>
+    </div>
+
+    <script>
+        feather.replace()
+    </script>
+</body>
+
+</html>
+{% endblock content %}

@@ -23,6 +23,15 @@ from account.views import (
     registration_view,
     login_view,
     home_account,
+    infos,
+    discussion,
+    exercer,
+    corriger,
+    evaluation,
+    correction_prof,
+    modification,
+    add_exo,
+    add_ctrl,
     logout_view
 )
 
@@ -30,8 +39,17 @@ from account.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',registration_view, name="register"),
-    path('login/', login_view, name="login"),
+    path('', login_view, name="login"),
     path('home/',home_account, name="home" ),
+    path('infos/',infos, name="infos" ),
+    path('discussion/',discussion, name="discussion" ),
+    path('exercer/',exercer, name="exercer" ),
+    path('corriger/',corriger, name="corriger" ),
+    path('evaluation/',evaluation, name="evaluation" ),
+    path('correction_prof/',correction_prof, name="correction_prof" ),
+    path('modification/',modification, name="modification" ),
+    path('add_exo/',add_exo, name="add_exo" ),
+    path('add_ctrl/',add_ctrl, name="add_ctrl" ),
     path('logout/', logout_view, name="logout"),
 
     # Mot de passe oublié. 
