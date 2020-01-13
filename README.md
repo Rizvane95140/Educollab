@@ -1,6 +1,6 @@
 # Educollab
 
-Ce projet est réalisé dans le cadre d'un projet scolaire. Il est codé avec le langage python et le framwork Django. 
+Ce projet est réalisé dans le cadre d'un projet scolaire. Il est codé avec le langage python et le framework Django. 
 
 Le but est de mettre en relation les élèves entre eux afin de se corriger, et d'offrir une plateforme de gestion pour les utilisateurs de l'application en temps que professeurs.
 
@@ -51,8 +51,12 @@ Il est également possible de créer un admin, et accéder à l'administration d
 ./manage.py createsuperuser
 ```
 
-Vous entrez vos données, et compte est crée.
+Vous entrez vos données, et votre compte admin est crée.
 
-Aperçu de la base de données : 
+L'URL vers l'admin :  ```/admin``` qui va vous permettre de créer les comptes étudiants et professeurs. 
+
+La prochaine étape est de créer la base de données.
+
+MCD de l'application (qui changera très certainement, car il manque certaines choses):
 
 ![Image de la base de données modélisé](https://i.ibb.co/ZKN2x61/Capture-d-e-cran-2019-10-27-a-16-41-14.png)
