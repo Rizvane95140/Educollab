@@ -44,3 +44,6 @@ Après ces installations, le projet devrait se lancer en local via la commande s
 ```
 
 Il ne faut pas oublier de configurer le fichier ```settings.py``` dans le dossier ```mysite``` avec les informations de la base de données que vous allez utiliser. 
+
+Aperçu de la base de données : 
+![Image de la base de données modélisé](https://i.ibb.co/ZKN2x61/Capture-d-e-cran-2019-10-27-a-16-41-14.png)
