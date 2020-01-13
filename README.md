@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 Les dépandances étant installés, il faut ensuite s'occuper de la base de données, en SQL Lite par défaut. Une erreur peut survenir sous MySQL à cause d'un problème de version. Une solution à ce problème sera fourni bientôt. 
 
-Pour installer la base de données, il faut se baser sur les fichiers de migrations. La commande a lancer afin de lancer la migrations est donc : 
+Pour installer la base de données, il faut se baser sur les fichiers de migrations. La commande a lancer afin de lancer la migration est donc : 
 
 ```
 python manage.py migrate
