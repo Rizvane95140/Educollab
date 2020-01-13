@@ -9,7 +9,7 @@ Le but est de mettre en relation les élèves entre eux afin de se corriger, et 
 ###### INSTALLATION DE L'ENVIRONNEMENT VIRUTEL (OTIONNEL)
 Vous pouvez commencer à installer un environnement virtuel, ou l'utiliser dans votre propre environnement. 
 
-Un de ces deux liens vous guideront dans cet installion 
+Un de ces deux liens vous guideront dans cet installation : 
 (https://virtualenv.pypa.io/en/latest/installation/)
 (https://tutorial.djangogirls.org/fr/django_installation/)
 
