@@ -1,0 +1,58 @@
+{% extends 'base_log.html' %} {% block content %}
+<!doctype html>
+<html lang="en">
+
+<main role="main" class="col-md-10 ml-sm-auto col-lg-10 pt-3 px-5">
+
+    <h2>Liste d'exercices</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Matière</th>
+                    <th>Chapitre</th>
+                    <th>Lien</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mathématiques</td>
+                    <td>Le raisonnement par récurrence</td>
+                    <td><span data-feather="edit"></span></td>
+
+                </tr>
+                <tr>
+                    <td>Mathématiques</td>
+                    <td>Suites arithmétiques et géométriques</td>
+                    <td><span data-feather="edit"></span></td>
+                </tr>
+                <tr>
+                    <td>Mathématiques</td>
+                    <td>Suites réelles</td>
+                    <td><span data-feather="edit"></span></td>
+                </tr>
+                <tr>
+                    <td>Mathématiques</td>
+                    <td> la fonction exponentielle</td>
+                    <td><span data-feather="edit"></span></td>
+                </tr>
+                <tr>
+                    <td>Mathématiques</td>
+                    <td> les fonctions sinus et cosinus</td>
+                    <td><span data-feather="edit"></span></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</main>
+</div>
+</div>
+<script>
+    feather.replace()
+</script>
+</body>
+
+</html>
+{% endblock content %}

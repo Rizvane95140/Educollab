@@ -33,12 +33,24 @@ class MyAccountManager(BaseUserManager):
         user.save(using=self._db)
 
 
+
+
+
 class Account(AbstractBaseUser, PermissionsMixin):
+
+    PROFESSOR = "PROFESSOR"
+    STUDENT = "STUDENT"
+    STATUT_CHOICES = (
+        (PROFESSOR, 'PROFESSOR'),
+        (STUDENT,'STUDENT')
+    )
+
     email                   = models.EmailField(verbose_name="email", max_length=60, unique=True)
     username                = models.CharField(max_length=30, unique=True)
     last_name               = models.CharField(max_length=60)
     first_name              = models.CharField(max_length=60)
     point                   = models.IntegerField(default=0)
+    statut                  = models.CharField(max_length=10, choices=STATUT_CHOICES, default='STUDENT')
     date_joined             = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
     last_login              = models.DateTimeField(verbose_name='last login', auto_now=True)
     is_admin                = models.BooleanField(default=False)

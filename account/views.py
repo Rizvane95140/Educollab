@@ -1,13 +1,63 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
-
+from django.contrib.auth.decorators import login_required
 from account.forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm
 # from blog.models import BlogPost
 
 
+def infos(request):
+	context = {}
+	context['user'] = request.user
+	return render(request, 'infos.html', context)
+
+def discussion(request):
+	context = {}
+	context['user'] = request.user
+	return render(request, 'discussion.html', context)
+
+def exercer(request):
+    return render(request, "exercer.html")
+ 
+def corriger(request):
+    return render(request, "correction.html")
+
+def evaluation(request):
+    return render(request, "evaluation.html")
+def correction_prof(request):
+    return render(request, "correction_prof.html")
+def modification(request):
+    return render(request, "modification.html")
+def add_exo(request):
+    return render(request, "add_exo.html")
+def add_ctrl(request):
+    return render(request, "add_ctrl.html")
+
+@login_required
 def home_account(request):
-    context = {}
-    return render(request, "account/home.html", context)
+	context = {}
+	context['user'] = request.user
+	if request.user.statut == 'PROFESSOR':
+		return render(request, 'account/home_student.html', context)
+	else:
+		return render(request, 'account/home_professor.html', context)
+
+	# Si c'est un prof, l'empecher de voir la page student
+	# Si c'est un étudiant, l'empecher de voir la page professeur
+
+    # Requete pour récupérer l'utilisateur
+
+	# Variable que passe dans la vue
+	
+	# Tu récupère le compte ici et tu fais une condition
+
+	# Si c'est student 
+	# return render(request, "account/home_student.html", context)
+	# Si c'est prof
+	# return render(request, "account/home_professor.html", context)
+	
+    
+
+
 
 def registration_view(request):
 	context = {}
@@ -31,7 +81,7 @@ def registration_view(request):
 
 def logout_view(request):
 	logout(request)
-	return redirect('/login')
+	return redirect('/')
 
 
 def login_view(request):
@@ -39,6 +89,7 @@ def login_view(request):
 	context = {}
 
 	user = request.user
+
 	if user.is_authenticated: 
 		return redirect("home")
 
