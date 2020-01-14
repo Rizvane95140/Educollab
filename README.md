@@ -59,4 +59,4 @@ La prochaine étape est de créer la base de données.
 
 MCD de l'application (qui changera très certainement, car il manque certaines choses):
 
-![Image de la base de données modélisé](https://i.ibb.co/ZKN2x61/Capture-d-e-cran-2019-10-27-a-16-41-14.png)
+![Image de la base de données modélisé](https://i.imgur.com/9BU8MIt.png)
