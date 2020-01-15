@@ -33,9 +33,6 @@ class MyAccountManager(BaseUserManager):
         user.save(using=self._db)
 
 
-
-
-
 class Account(AbstractBaseUser, PermissionsMixin):
 
     PROFESSOR = "PROFESSOR"
@@ -72,3 +69,25 @@ class Account(AbstractBaseUser, PermissionsMixin):
 
     def has_module_perm(self, app_label):
         return True
+
+
+class Topics(models.Model):
+    user = models.ForeignKey(Account, on_delete=models.SET_NULL, null=True)
+    title = models.CharField(max_length=150)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    REQUIRED_FIELDS = ['user', 'title']
+
+    def __str__(self):
+        return self.title
+
+class Messages(models.Model):
+    user = models.ForeignKey(Account, on_delete=models.SET_NULL, null=True)    
+    topic = models.ForeignKey(Topics, on_delete=models.CASCADE)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    REQUIRED_FIELDS = ['user', 'topic', 'message']
+
+    def __str__(self):
+        return self.message
