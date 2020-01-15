@@ -53,10 +53,10 @@ Il est également possible de créer un admin, et accéder à l'administration d
 
 Vous entrez vos données, et votre compte admin est crée.
 
-L'URL vers l'admin :  ```/admin``` qui va vous permettre de créer les comptes étudiants et professeurs. 
+L'URL vers l'admin :  ```/admin``` qui va vous permettre de créer les comptes étudiants et professeurs en se connectant avec le compte admin que vous avez créé au préalable. 
 
 La prochaine étape est de créer la base de données.
 
 MCD de l'application (qui changera très certainement, car il manque certaines choses):
 
-![Image de la base de données modélisé](https://i.imgur.com/9BU8MIt.png)
+![Image de la base de données modélisé](https://i.imgur.com/ZMk0cRK.png)
