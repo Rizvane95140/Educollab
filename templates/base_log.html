@@ -26,8 +26,9 @@
         </li>
     </ul>
 </nav>
-    
+
 {% if user.statut == 'PROFESSOR' %}
+
 
 <div class="container-fluid">
     <div class="row">
@@ -162,6 +163,22 @@
                         feather.replace()
                 </script>
             {% endif %} 
+       
+            {% if messages %}
+           
+              
+            <ul class="messages">
+                {% for message in messages %}
+                <div {% if message.tags %} class="{{ message.tags }}"{% endif %} role="alert">
+                    {{ message }}                 
+                 </div>
+                {% endfor %}
+            </ul>
+            
+            {% endif %}
+            
+
         {% block content %} 
-    {% endblock content %}
+        
+        {% endblock content %}
 {% include 'snippets/footer_log.html' %}
