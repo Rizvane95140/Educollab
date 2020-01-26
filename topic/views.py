@@ -4,5 +4,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 def list_discussion(request):
-    message = "Salut !"
-    return HttpResponse(message)
+    context = {
+        'page_title': 'Discussion'
+    }
+    
+    context['user'] = request.user
+    return render(request, 'topic/index.html', context)
+

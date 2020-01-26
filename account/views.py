@@ -9,36 +9,13 @@ def infos(request):
 	context = {}
 	context['user'] = request.user
 	return render(request, 'infos.html', context)
-	
-def discussion(request):
-	context = {}
-	context['user'] = request.user
-	return render(request, 'discussion.html', context)
-
-def exercer(request):
-    return render(request, "exercer.html")
- 
-def corriger(request):
-    return render(request, "correction.html")
-
-def evaluation(request):
-    return render(request, "evaluation.html")
-
-def correction_prof(request):
-    return render(request, "correction_prof.html")
-
-def modification(request):
-    return render(request, "modification.html")
-
-def add_exo(request):
-    return render(request, "add_exo.html")
-	
-def add_ctrl(request):
-    return render(request, "add_ctrl.html")
 
 @login_required
 def home_account(request):	
-	context = {}
+	context = {
+		'page_title': 'Accueil'
+	}
+
 	context['user'] = request.user
 
 
@@ -46,7 +23,7 @@ def home_account(request):
 	#	return render(request, 'account/PROFESSOR/home.html', context)
 	#elif request.user.statut == 'STUDENT':
 	#	return render(request, 'account/STUDENT/home.html', context)
-
+	
 	return render(request, 'base.html', context)
 
 	# Si c'est un prof, l'empecher de voir la page student
@@ -103,10 +80,10 @@ def login_view(request):
 			email = request.POST['email']
 			password = request.POST['password']
 			user = authenticate(email=email, password=password)
+			messages.success(request, 'Bienvenue %s !' % user.username)
 
 			if user:
 				login(request, user)
-				messages.success(request, 'Bienvenue %s !' % user.username)
 				return redirect("home")
 
 	else:
@@ -122,7 +99,7 @@ def login_view(request):
 def account_view(request):
 
 	if not request.user.is_authenticated:
-			return redirect("login")
+		return redirect("login")
 
 	context = {}
 	if request.POST:
