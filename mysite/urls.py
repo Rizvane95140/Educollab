@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 from django.conf import settings
@@ -23,15 +23,6 @@ from account.views import (
     registration_view,
     login_view,
     home_account,
-    infos,
-    discussion,
-    exercer,
-    corriger,
-    evaluation,
-    correction_prof,
-    modification,
-    add_exo,
-    add_ctrl,
     logout_view
 )
 
@@ -41,15 +32,13 @@ urlpatterns = [
     path('register/',registration_view, name="register"),
     path('', login_view, name="login"),
     path('home/',home_account, name="home"),
-    path('infos/',infos, name="infos" ),
-    path('discussion/',discussion, name="discussion" ),
-    path('exercer/',exercer, name="exercer" ),
-    path('corriger/',corriger, name="corriger" ),
-    path('evaluation/',evaluation, name="evaluation" ),
-    path('correction_prof/',correction_prof, name="correction_prof" ),
-    path('modification/',modification, name="modification" ),
-    path('add_exo/',add_exo, name="add_exo" ),
-    path('add_ctrl/',add_ctrl, name="add_ctrl" ),
+    path('logout/', logout_view, name="logout"),
+
+
+    #topic
+    path('topic/', include('topic.urls', namespace='topic')),
+
+
     path('logout/', logout_view, name="logout"),
     # Mot de passe oublié. 
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
