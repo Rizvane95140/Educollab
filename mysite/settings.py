@@ -37,6 +37,8 @@ if DEBUG:
 
 INSTALLED_APPS = [
     'account',
+    'topic',
+    'message',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
